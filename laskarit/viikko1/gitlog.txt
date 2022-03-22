@@ -1,0 +1,105 @@
+commit 8931bd8835362839dca42c7aa4d7a5a419502585
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 19:05:42 2022 +0200
+
+    tehtävä 11 valmis
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 2cc03cc35f372733e051b501e99cb9125d90759e
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 18:59:25 2022 +0200
+
+    teht.11 tiedostot luotu
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 073da8a1fb42217de7beb65982f4111aa7d7c94d
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 18:46:28 2022 +0200
+
+    tehtävä 9
+
+ eka.txt    | 12 +++++-------
+ kolmas.txt |  1 +
+ 2 files changed, 6 insertions(+), 7 deletions(-)
+
+commit 8f9d538993d8acdb55dafc198a5674af22ba6107
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 18:42:47 2022 +0200
+
+    Uudelleennimetty tiedosto.txt -> eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 682ba81d8bb327dd35b1f0391fe6d26616d12afe
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 18:41:14 2022 +0200
+
+    toinen.txt poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 5b4814c871e301fc457d31dc8c4ead906ddfa80c
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 18:37:55 2022 +0200
+
+    tiedosto.txt tekstiä poistettu ja lisätty
+
+ tiedosto.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit 4a5f06b024e173527c3d711dc82282e9fe237d43
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 18:36:03 2022 +0200
+
+    Paljon tekstiä lisätty tiedosto.txt
+
+ tiedosto.txt | 290 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 290 insertions(+)
+
+commit a2f423608e81cd88bc132391e94d069b68a08c26
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 18:25:00 2022 +0200
+
+    Muutoksia tokaan ja kolmanteen!
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 164d9f41b4a581e42aceb7d5d194fec08a926122
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 18:23:42 2022 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 150446e4e042cb577b3214cebd1c161e12392d87
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 18:21:51 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 70e3342941ff35526090a296ab46c5701949124f
+Author: Janne Lempinen <janne.lempinen@helsinki.fi>
+Date:   Tue Mar 22 18:19:38 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+jannelem@DESKTOP-7J2S175:~/ot_viikko1$
