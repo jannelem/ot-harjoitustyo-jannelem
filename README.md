@@ -1,4 +1,4 @@
-#Ohjelmistotekniikan harjoitustyö
+# Ohjelmistotekniikan harjoitustyö
 
 ## Viikon 1 tunnelmat
 
@@ -7,6 +7,7 @@ Tämä ensimmäinen viikko oli varsin stressaava, koska olin työn ohessa opiske
 Tässä kuitenkin toivotut tiedostot:
 
 [gitlog.txt](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/laskarit/viikko1/gitlog.txt)
+
 [komentorivi.txt](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/laskarit/viikko1/komentorivi.txt)
 
 
