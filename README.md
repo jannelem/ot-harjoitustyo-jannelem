@@ -13,3 +13,7 @@ Tässä kuitenkin toivotut tiedostot:
 ### Tehtävässä 16 tehty muutos
 
 Tämä lisäys on tehty **paikallisella koneella**!
+
+### Tehtävän 17 muutos
+
+Pöö!
