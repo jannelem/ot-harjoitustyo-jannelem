@@ -10,4 +10,6 @@ Tässä kuitenkin toivotut tiedostot:
 
 [komentorivi.txt](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/laskarit/viikko1/komentorivi.txt)
 
+### Tehtävässä 16 tehty muutos
 
+Tämä lisäys on tehty **paikallisella koneella**!
