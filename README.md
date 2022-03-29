@@ -1,5 +1,10 @@
 # Ohjelmistotekniikan harjoitustyö
 
+## Viikko 2
+
+[vaatimusmaarittely.md](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[työaikakirjanpito](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/dokumentaatio/tuntikirjanpito.md)
+
 ## Viikon 1 tunnelmat
 
 Tämä ensimmäinen viikko oli varsin stressaava, koska olin työn ohessa opiskelevana varannut aikaa tehtäviin **viikonlopusta**. Sain kuitenkin ssh:llä kirjauduttua vasta *maanantaina*. **Stressiä riittää!!!**
