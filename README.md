@@ -3,7 +3,8 @@
 ## Viikko 2
 
 [vaatimusmaarittely.md](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/dokumentaatio/vaatimusmaarittely.md)
-[työaikakirjanpito](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/dokumentaatio/tuntikirjanpito.md)
+
+[työaikakirjanpito.md](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 ## Viikon 1 tunnelmat
 
