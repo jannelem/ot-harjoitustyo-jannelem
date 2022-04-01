@@ -31,6 +31,8 @@
 			Pelaaja omistaja
 			int talojen_lkm
 			boolean hotelli
+			rakenna_talo()
+			rakenna_hotelli()
 		}
 		class Pelaaja {
 			int rahaa
