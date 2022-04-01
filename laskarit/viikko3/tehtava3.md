@@ -2,6 +2,6 @@
 
 ```mermaid
 	sequenceDiagram
-		A->>B
+		A->>B: test
 
 ```
