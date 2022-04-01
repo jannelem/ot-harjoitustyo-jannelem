@@ -18,6 +18,7 @@
 		
 		class Ruutu {
 			Ruutu seuraava_ruutu
+			toiminto()
 		}
 		class Pelilauta {
 			Ruutu aloitusruutu
@@ -25,6 +26,9 @@
 		}
 		class Kortti {
 			toiminto()
+		}
+		class Katu {
+			String nimi
 		}
 		
 ```
