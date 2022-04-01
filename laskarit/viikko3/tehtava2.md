@@ -3,11 +3,10 @@
 ```mermaid
 	classDiagram
 		Monopoli "1" -- "1" Pelilauta
-		Monopoli "1" -- "1" Noppa1
-		Monopoli "1" -- "1" Noppa2
-		Monopoli "1" -- "*" Pelaaja
+		Monopoli "1" -- "2" Noppa
+		Monopoli "1" -- "2..8" Pelaaja
 		Pelaaja "1" -- "1" Nappula
-		Pelilauta "1" -- "*" Ruutu
+		Pelilauta "1" -- "40" Ruutu
 		Nappula "1" -- "1" Ruutu
 		Ruutu <|-- Aloitus
 		Ruutu <|-- Vankila
@@ -29,6 +28,12 @@
 		}
 		class Katu {
 			String nimi
+			Pelaaja omistaja
+			int talojen_lkm
+			boolean hotelli
+		}
+		class Pelaaja {
+			int rahaa
 		}
 		
 ```
