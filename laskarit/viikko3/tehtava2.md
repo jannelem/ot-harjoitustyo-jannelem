@@ -7,7 +7,7 @@
 		Monopoli "1" -- "2..8" Pelaaja
 		Pelaaja "1" -- "1" Nappula
 		Pelilauta "1" -- "40" Ruutu
-		Nappula "1" -- "1" Ruutu
+		Nappula "*" -- "1" Ruutu
 		Pelaaja "1" -- "*" Katu
 		Ruutu <|-- Aloitus
 		Ruutu <|-- Vankila
