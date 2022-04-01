@@ -12,4 +12,8 @@
 		Pelilauta "1" --> "*" Ruutu
 		Nappula "1" --> "1" Ruutu
 		
+		class Nappula {
+			seuraava_ruutu
+		}
+		
 ```
