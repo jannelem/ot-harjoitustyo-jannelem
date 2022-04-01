@@ -1,6 +1,4 @@
-# Viikon 3 laskuharjoitusten kaaviot
-
-## Tehtävä 1. Monopoli
+# Tehtävä 1. Monopoli
 
 ```mermaid
 	classDiagram
@@ -12,8 +10,8 @@
 		Pelilauta "1" --> "*" Ruutu
 		Nappula "1" --> "1" Ruutu
 		
-		class Nappula {
-			seuraava_ruutu
+		class Ruutu {
+			Ruutu seuraava_ruutu
 		}
 		
 ```
