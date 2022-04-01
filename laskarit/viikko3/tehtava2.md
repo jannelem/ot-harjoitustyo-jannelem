@@ -13,5 +13,9 @@
 		class Ruutu {
 			Ruutu seuraava_ruutu
 		}
+		class Pelilauta {
+			Ruutu aloitusruutu
+			Ruutu vankila
+		}
 		
 ```
