@@ -1,6 +1,6 @@
 # Tehtävä 3. Sekvenssikaavio
 
 ```mermaid
-	A->>B	
+	A->>B: test
 
 ```
