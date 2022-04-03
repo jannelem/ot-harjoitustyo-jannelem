@@ -1,12 +1,12 @@
 
 from entities.game import TicTacToe
 
-def play(game: TicTacToe, row, column):
+def play(game: TicTacToe, row: int, column: int):
         if game.board[row][column] == 0:
             game.board[row][column] = game.turn
             game.turn = -game.turn
 
-def check_winner(game):
+def check_winner(game: TicTacToe) -> int:
     board_size = len(game.board)
     diagonal1_sum = 0
     diagonal2_sum = 0
