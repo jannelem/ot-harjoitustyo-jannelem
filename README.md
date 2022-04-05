@@ -1,25 +1,59 @@
-# Ohjelmistotekniikan harjoitustyö
+# Ristinolla
 
-## Viikko 2
+Pelissä kaksi pelaajaa pystyy pelaamaan ristinollaa tämänhetkisessä versiossa 3x3-ruudukossa (myöhemmin pelaajan valitsemassa ruudukkokoossa). Kun jompikumpi pelaajista saa rivin täyteen, sovellus ilmoittaa voittajan.
 
-[vaatimusmaarittely.md](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/dokumentaatio/vaatimusmaarittely.md)
+## Python-versio
 
-[työaikakirjanpito.md](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/dokumentaatio/tuntikirjanpito.md)
+Sovellusta on testattu Pythonin versiolla 3.8, joten vanhemmilla versioilla toimintaa ei voida taata.
 
-## Viikon 1 tunnelmat
+## Dokumentaatio
 
-Tämä ensimmäinen viikko oli varsin stressaava, koska olin työn ohessa opiskelevana varannut aikaa tehtäviin **viikonlopusta**. Sain kuitenkin ssh:llä kirjauduttua vasta *maanantaina*. **Stressiä riittää!!!**
+- Käyttöohje (tulossa)
+- [Vaatimusmäärittely](.dokumentaatio/vaatimusmaarittely.md)
+- Arkkitehtuurikuvaus (tulossa)
+- Testausdokumentti (tulossa)
+- [Työaikakirjanpito](.dokumentaatio/tuntikirjanpito.md)
+- [Changelog](.dokumentaatio/changelog.md)
 
-Tässä kuitenkin toivotut tiedostot:
+## Asennus
 
-[gitlog.txt](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/laskarit/viikko1/gitlog.txt)
+Kirjoita seuraavat komentorivikomennot sovelluksen asentamiseksi:
 
-[komentorivi.txt](https://github.com/jannelem/ot-harjoitustyo-jannelem/blob/master/laskarit/viikko1/komentorivi.txt)
+1. Riippuvuuksien asentaminen:
 
-### Tehtävässä 16 tehty muutos
+```bash
+poetry install
+```
 
-Tämä lisäys on tehty **paikallisella koneella**!
+2. Sovelluksen käynnistäminen:
 
-### Tehtävän 17 muutos
+```bash
+poetry run invoke start
+```
 
-Pöö!
+## Komentorivikomennot
+
+### Ohjelman suorittaminen:
+
+Peli käynnistyy komennolla:
+
+```bash
+poetry run invoke start
+```
+
+### Testaus
+
+Testit suoritetaan komennolla:
+
+```bash
+poetry run invoke test
+```
+
+### Testikattavuus
+
+Testikattavuusraportin htmlcov-hakemistoon saa generoitua komennolla:
+
+```bash
+poetry run invoke coverage-report
+```
+
