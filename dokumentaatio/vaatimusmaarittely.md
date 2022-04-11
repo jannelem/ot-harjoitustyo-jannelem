@@ -10,9 +10,9 @@ Sovelluksella on näillä näkymin vain yksi käyttäjärooli eli pelaaja. Jos k
 
 ## Perusversion tarjoama toiminnallisuus
 
-- Aivan ensimmäisessä kurssin puitteissa tehtävässä palautuksessa palautetaan minimalistinen versio, joka tarjoaa mahdollisuuden pelata erän ristinollaa yhden kokoisella ruudukolla. Peli päättyy jommankumman pelaajan voittoon tai tasapeliin, kun kaikki ruudut ovat täynnä. * tehty! *
-- Käyttöliittymä voi ainakin alkuvaiheessa olla tekstipohjainen, mutta muuttuu toivottavasti graafiseksi kurssin edetessä. * osittain tehty! *
-- Perusversiota laajennetaan kurssin aikana tarjoamaan pelaajille mahdollisuus valita peliruudukon koko. * tehty! *
+- Aivan ensimmäisessä kurssin puitteissa tehtävässä palautuksessa palautetaan minimalistinen versio, joka tarjoaa mahdollisuuden pelata erän ristinollaa yhden kokoisella ruudukolla. Peli päättyy jommankumman pelaajan voittoon tai tasapeliin, kun kaikki ruudut ovat täynnä. **tehty!**
+- Käyttöliittymä voi ainakin alkuvaiheessa olla tekstipohjainen, mutta muuttuu toivottavasti graafiseksi kurssin edetessä. **osittain tehty!**
+- Perusversiota laajennetaan kurssin aikana tarjoamaan pelaajille mahdollisuus valita peliruudukon koko. **tehty!**
 - Lisäksi toteutetaan tilastointi ja parhaiden pelaajien listaus, jotka vaativat alkeellisen käyttäjähallinnan.
 
 ## Jatkokehitysideoita
