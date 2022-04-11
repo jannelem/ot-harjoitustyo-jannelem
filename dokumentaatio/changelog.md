@@ -1,5 +1,9 @@
 # Changelog
 
+## Viikko 4
+
+- peliä laajennettu toimimaan erikokoisissa ruudukoissa
+
 ## Viikko 3
 
 - ensimmäinen versio käyttöliittymästä koodattu

@@ -1,6 +1,6 @@
 from entities.game import *
-from services.game_service import Game_service
+from services.game_service import *
 from ui.ui import *
 
 if __name__ == "__main__":
-	play_game()
+	play_game(10)

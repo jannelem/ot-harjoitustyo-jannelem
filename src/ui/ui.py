@@ -1,10 +1,9 @@
-from re import X
 import pygame
 from entities.game import *
 from services.game_service import *
 
-def play_game():
-	game = TicTacToe()
+def play_game(board_size):
+	game = TicTacToe(board_size)
 	pygame.init()
 	display = pygame.display.set_mode((640,480))
 	font = pygame.font.SysFont("Arial", 24)
@@ -18,47 +17,17 @@ def play_game():
 				exit()
 
 			if event.type == pygame.MOUSEBUTTONDOWN:
-				mouse_position = pygame.mouse.get_pos()
-				if 300 <= mouse_position[0] <= 399 and 50 <= mouse_position[1] <= 149:
-					play(game,0,0)
-				if 410 <= mouse_position[0] <= 509 and 50 <= mouse_position[1] <= 149:
-					play(game,0,1)
-				if 520 <= mouse_position[0] <= 619 and 50 <= mouse_position[1] <= 149:
-					play(game,0,2)
-				if 300 <= mouse_position[0] <= 399 and 160 <= mouse_position[1] <= 259:
-					play(game,1,0)
-				if 410 <= mouse_position[0] <= 509 and 160 <= mouse_position[1] <= 259:
-					play(game,1,1)
-				if 520 <= mouse_position[0] <= 619 and 160 <= mouse_position[1] <= 259:
-					play(game,1,2)
-				if 300 <= mouse_position[0] <= 399 and 270 <= mouse_position[1] <= 369:
-					play(game,2,0)
-				if 410 <= mouse_position[0] <= 509 and 270 <= mouse_position[1] <= 369:
-					play(game,2,1)
-				if 520 <= mouse_position[0] <= 619 and 270 <= mouse_position[1] <= 369:
-					play(game,2,2)
-		
+				mouse_pos = pygame.mouse.get_pos()
+				mouse_rect = pygame.Rect(mouse_pos[0], mouse_pos[1],1,1)
+				mouse_sprite = pygame.sprite.Sprite()
+				mouse_sprite.rect = mouse_rect
+				for tile in game.tiles:
+					if pygame.sprite.collide_rect(mouse_sprite, tile):
+						play(game, tile)
 
-		
 				
 
 		display.fill((255,255,255))
-
-		x = 300
-		y = 50
-
-		for i in range (len(game.board)):
-			for j in range(len(game.board)):
-				pygame.draw.rect(display, (0,0,255), (x,y,100,100))
-				if game.board[i][j] == 1:
-					pygame.draw.line(display, (255,0,255), (x,y),(x+100,y+100),5)
-					pygame.draw.line(display, (255,0,255), (x+100,y),(x,y+100),5)
-				if game.board[i][j] == -1:
-					pygame.draw.circle(display, (255,0,255), (x+50,y+50),49)
-					pygame.draw.circle(display, (0,0,255), (x+50,y+50),44)
-				x += 110
-			x = 300
-			y += 110
 
 		if game.turn == 1:
 			turn_information_string = "Vuorossa: X"
@@ -66,14 +35,25 @@ def play_game():
 			turn_information_string = "Vuorossa: 0"
 		turn_information_text = font.render(turn_information_string, True, (0,128,128))
 		display.blit(turn_information_text,(50,50))
+
+		for tile in game.tiles:
+			pygame.draw.rect(display, (0,128,128), (tile.x, tile.y, tile.size, tile.size))
+			if tile.sign == 1:
+				pygame.draw.line(display, (128,128,0), (tile.x, tile.y),(tile.x+tile.size-1, tile.y+tile.size-1),3)
+				pygame.draw.line(display, (128,128,0), (tile.x+tile.size-1, tile.y),(tile.x, tile.y+tile.size-1),3)
+			elif tile.sign == -1:
+				pygame.draw.circle(display, (128,128,0), (tile.x+tile.size//2, tile.y+tile.size//2), tile.size//2, 3)
+
+
+
 		
-		if check_winner(game) != 0:
-			if check_winner(game) > 0:
-				winner_string = "Risti voitti!"
-			if check_winner(game) < 0:
-				winner_string = "Nolla voitti!"
-			winner_information_text = font.render(winner_string, True, (0,128,128))
-			display.blit(winner_information_text,(50,200))
+		#if check_winner(game) != 0:
+		#	if check_winner(game) > 0:
+		#		winner_string = "Risti voitti!"
+		#	if check_winner(game) < 0:
+		#		winner_string = "Nolla voitti!"
+		#	winner_information_text = font.render(winner_string, True, (0,128,128))
+		#	display.blit(winner_information_text,(50,200))
 		
 				
 
