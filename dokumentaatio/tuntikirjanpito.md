@@ -9,4 +9,7 @@
 | 3.4. | 4 | graafisen käyttöliittymän koodaus |
 | 5.4. | 1 | testauksen aloittaminen ja coveragen käyttöönotto |
 | 5.4. | 1 | invoke-tehtävät ja dokumentaatio |
-| yht. | 17 | |
+| 11.4. | 4 | käyttöliittymän ja sovelluslogiikan laajennus erikokoisiin ruudukoihin |
+| 11.4. | 2 | pylintin käyttöönotto ja virheiden korjaaminen |
+| 12.4. | 2 | testien kirjoittaminen |
+| yht. | 25 | |

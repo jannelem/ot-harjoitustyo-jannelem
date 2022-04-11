@@ -2,7 +2,12 @@
 
 ## Viikko 4
 
-- peliä laajennettu toimimaan erikokoisissa ruudukoissa
+- peliä laajennettu toimimaan erikokoisissa ruudukoissa (3x3...15x15)
+- väliaikainen ratkaisu, jossa käyttäjältä kysytään tekstimuodossa syötteenä pelilaudan koko
+- korjattu edellisen version käynnistymisen estävä virhe
+- korjattu edellisen version virhe, jonka myötä ruutuja pystyi klikkaamaan vaikka toinen pelaajista oli voittanut
+- sovelluslogiikan testausta laajennettu 100 % testikattavuuteen
+- lisätty invoke-komennot lint ja format
 
 ## Viikko 3
 

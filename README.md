@@ -9,11 +9,11 @@ Sovellusta on testattu Pythonin versiolla 3.8, joten vanhemmilla versioilla toim
 ## Dokumentaatio
 
 - Käyttöohje (tulossa)
-- [Vaatimusmäärittely](.dokumentaatio/vaatimusmaarittely.md)
+- [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 - Arkkitehtuurikuvaus (tulossa)
 - Testausdokumentti (tulossa)
-- [Työaikakirjanpito](.dokumentaatio/tuntikirjanpito.md)
-- [Changelog](.dokumentaatio/changelog.md)
+- [Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)
+- [Changelog](./dokumentaatio/changelog.md)
 
 ## Asennus
 
@@ -30,6 +30,8 @@ poetry install
 ```bash
 poetry run invoke start
 ```
+
+Sovellus kysyy ensin käyttäjältä haluttua pelilaudan kokoa, jonka jälkeen käynnistyy graafinen käyttöliittymä.
 
 ## Komentorivikomennot
 
@@ -56,4 +58,13 @@ Testikattavuusraportin htmlcov-hakemistoon saa generoitua komennolla:
 ```bash
 poetry run invoke coverage-report
 ```
+
+### Pylint
+
+Pylint-tarkistuksen voi suorittaa komennolla:
+
+```bash
+poetry run invoke lint
+```
+
 
