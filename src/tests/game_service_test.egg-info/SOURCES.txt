@@ -1,5 +1,0 @@
-game_service_test.py
-game_service_test.egg-info/PKG-INFO
-game_service_test.egg-info/SOURCES.txt
-game_service_test.egg-info/dependency_links.txt
-game_service_test.egg-info/top_level.txt
