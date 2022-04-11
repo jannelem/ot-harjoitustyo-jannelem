@@ -1,5 +1,5 @@
 
-from entities.game import TicTacToe
+from entities.game import *
 
 class Game_service:
 
@@ -8,7 +8,7 @@ class Game_service:
                 game.board[row][column] = game.turn
                 game.turn = -game.turn
 
-    def check_winner(game: TicTacToe) -> int:
+    def check_winner(game):
         board_size = len(game.board)
         diagonal1_sum = 0
         diagonal2_sum = 0

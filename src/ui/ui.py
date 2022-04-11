@@ -1,6 +1,6 @@
 from re import X
 import pygame
-from entities.game import TicTacToe
+from entities.game import *
 from services.game_service import *
 
 def play_game():
