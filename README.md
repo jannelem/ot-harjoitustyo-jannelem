@@ -10,7 +10,7 @@ Sovellusta on testattu Pythonin versiolla 3.8, joten vanhemmilla versioilla toim
 
 - Käyttöohje (tulossa)
 - [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
-- Arkkitehtuurikuvaus (tulossa)
+- {Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuuri.md)
 - Testausdokumentti (tulossa)
 - [Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)
 - [Changelog](./dokumentaatio/changelog.md)
