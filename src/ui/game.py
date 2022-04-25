@@ -25,7 +25,6 @@ def play_game(board_size):
                 for tile in game.tiles:
                     if pygame.sprite.collide_rect(mouse_sprite, tile):
                         play(game, tile)
-                        tile.deactivate()
 
         display.fill((255, 255, 255))
 

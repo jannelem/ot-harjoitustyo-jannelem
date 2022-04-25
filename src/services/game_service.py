@@ -6,6 +6,7 @@ def play(game: TicTacToe, tile: Tile):
     if tile.sign == 0 and tile.active is True:
         tile.sign = game.turn
         game.turn = -game.turn
+        tile.deactivate()
 
 
 def check_winner(game):
