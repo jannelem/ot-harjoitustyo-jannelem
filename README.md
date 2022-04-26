@@ -1,6 +1,6 @@
 # Ristinolla
 
-Pelissä kaksi pelaajaa pystyy pelaamaan ristinollaa tämänhetkisessä versiossa 3x3-ruudukossa (myöhemmin pelaajan valitsemassa ruudukkokoossa). Kun jompikumpi pelaajista saa rivin täyteen, sovellus ilmoittaa voittajan.
+Pelissä kaksi pelaajaa pystyy pelaamaan ristinollaa 3x3...15x15 -kokoisessa ruudukossa. Kun jompikumpi pelaajista saa rivin täyteen, sovellus ilmoittaa voittajan.
 
 ## Python-versio
 
