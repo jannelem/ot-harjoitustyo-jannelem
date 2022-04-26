@@ -1,6 +1,5 @@
-from ui.game import play_game
-from ui.menus import MainMenu
 from tkinter import Tk
+from ui.menus import MainMenu
 
 if __name__ == "__main__":
     window = Tk()
@@ -10,4 +9,3 @@ if __name__ == "__main__":
     main_menu.start()
 
     window.mainloop()
-    

@@ -1,5 +1,9 @@
 # Changelog
 
+## Viikko 5
+
+- vaihdettu aiemmin komentorivillä ollut toiminnallisuus ruudukon koon valinnasta graafiseksi Tkinterillä toteutetuksi käyttöliittymäksi (jolla toteutetaan valikot ja mahdollisesti pelikin, koska aika on kulunut yrityksiin saada Tkinter ja pygame toimimaan yhteen)
+
 ## Viikko 4
 
 - peliä laajennettu toimimaan erikokoisissa ruudukoissa (3x3...15x15)
