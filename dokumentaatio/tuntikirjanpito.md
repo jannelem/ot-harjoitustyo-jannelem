@@ -12,4 +12,7 @@
 | 11.4. | 4 | käyttöliittymän ja sovelluslogiikan laajennus erikokoisiin ruudukoihin |
 | 11.4. | 2 | pylintin käyttöönotto ja virheiden korjaaminen |
 | 12.4. | 2 | testien kirjoittaminen |
-| yht. | 25 | |
+| 23.4. | 1 | pelaajaluokan alustava koodaaminen |
+| 24.4. | 4 | Tkinteriin tutustuminen ja suunnittelu |
+| 25.4. | 3 | graafisen valikkokäyttöliittymän aloitus |
+| yht. | 33 | |
