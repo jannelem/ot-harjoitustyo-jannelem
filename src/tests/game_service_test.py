@@ -1,64 +1,62 @@
 import unittest
 from entities.game import TicTacToe
-from services.game_service import *
+from services.game_service import GameService
+from services.player_service import PlayerService
 
 
-class TestGame_service(unittest.TestCase):
+class TestGameService(unittest.TestCase):
 
     def setUp(self):
+        self.player_service = PlayerService()
+        self.game_service = GameService(self.player_service)
         self.game = TicTacToe(4)
         self.game_diagonals = TicTacToe(4)
         self.game_column_and_row = TicTacToe(4)
 
-        play(self.game_diagonals, self.game_diagonals.board[0][0])
-        play(self.game_diagonals, self.game_diagonals.board[0][3])
-        play(self.game_diagonals, self.game_diagonals.board[1][1])
-        play(self.game_diagonals, self.game_diagonals.board[1][2])
-        play(self.game_diagonals, self.game_diagonals.board[2][2])
-        play(self.game_diagonals, self.game_diagonals.board[2][1])
+        self.game_service.play(self.game_diagonals, self.game_diagonals.board[0][0])
+        self.game_service.play(self.game_diagonals, self.game_diagonals.board[0][3])
+        self.game_service.play(self.game_diagonals, self.game_diagonals.board[1][1])
+        self.game_service.play(self.game_diagonals, self.game_diagonals.board[1][2])
+        self.game_service.play(self.game_diagonals, self.game_diagonals.board[2][2])
+        self.game_service.play(self.game_diagonals, self.game_diagonals.board[2][1])
 
-        play(self.game_column_and_row, self.game_column_and_row.board[2][0])
-        play(self.game_column_and_row, self.game_column_and_row.board[0][3])
-        play(self.game_column_and_row, self.game_column_and_row.board[2][1])
-        play(self.game_column_and_row, self.game_column_and_row.board[1][3])
-        play(self.game_column_and_row, self.game_column_and_row.board[2][2])
-        play(self.game_column_and_row, self.game_column_and_row.board[3][3])
-
-    def test_board_is_initially_blank(self):
-        for tile in self.game.tiles:
-            self.assertEqual(tile.sign, 0)
+        self.game_service.play(self.game_column_and_row, self.game_column_and_row.board[2][0])
+        self.game_service.play(self.game_column_and_row, self.game_column_and_row.board[0][3])
+        self.game_service.play(self.game_column_and_row, self.game_column_and_row.board[2][1])
+        self.game_service.play(self.game_column_and_row, self.game_column_and_row.board[1][3])
+        self.game_service.play(self.game_column_and_row, self.game_column_and_row.board[2][2])
+        self.game_service.play(self.game_column_and_row, self.game_column_and_row.board[3][3])
 
     def test_first_move_changes_board(self):
-        play(self.game, self.game.board[0][0])
-        self.assertEqual(self.game.board[0][0].sign, 1)
+        self.game_service.play(self.game, self.game.board[0][0])
+        self.assertEqual(self.game.board[0][0].value, 1)
 
     def test_same_tile_cannot_be_played_again(self):
-        play(self.game, self.game.board[0][0])
-        play(self.game, self.game.board[0][0])
-        self.assertEqual(self.game.board[0][0].sign, 1)
+        self.game_service.play(self.game, self.game.board[0][0])
+        self.game_service.play(self.game, self.game.board[0][0])
+        self.assertEqual(self.game.board[0][0].value, 1)
 
     def test_tiles_are_deactivated(self):
-        self.game.deactivate_tiles()
-        for tile in self.game.tiles:
-            self.assertEqual(tile.active, False)
+        self.game_service.game_over(self.game_diagonals)
+        self.assertEqual(self.game_service.active_tiles(self.game_diagonals), False)
 
     def test_no_winner(self):
-        self.assertEqual(check_winner(self.game_diagonals), 0)
+        self.assertEqual(self.game_service.check_winner(self.game_diagonals), 0)
 
     def test_diagonal1_winner_is_detected(self):
-        play(self.game_diagonals, self.game_diagonals.board[3][3])
-        self.assertEqual(check_winner(self.game_diagonals), 4)
+        self.game_service.play(self.game_diagonals, self.game_diagonals.board[3][3])
+        self.assertEqual(self.game_service.check_winner(self.game_diagonals), 4)
 
     def test_diagonal2_winner_is_detected(self):
-        play(self.game_diagonals, self.game_diagonals.board[0][2])
-        play(self.game_diagonals, self.game_diagonals.board[3][0])
-        self.assertEqual(check_winner(self.game_diagonals), -4)
+        self.game_service.play(self.game_diagonals, self.game_diagonals.board[0][2])
+        self.game_service.play(self.game_diagonals, self.game_diagonals.board[3][0])
+        self.assertEqual(self.game_service.check_winner(self.game_diagonals), -4)
 
     def test_row_is_detected(self):
-        play(self.game_column_and_row, self.game_column_and_row.board[2][3])
-        self.assertEqual(check_winner(self.game_column_and_row), 4)
+        self.game_service.play(self.game_column_and_row, self.game_column_and_row.board[2][3])
+        self.assertEqual(self.game_service.check_winner(self.game_column_and_row), 4)
 
     def test_column_is_detected(self):
-        play(self.game_column_and_row, self.game_column_and_row.board[0][1])
-        play(self.game_column_and_row, self.game_column_and_row.board[2][3])
-        self.assertEqual(check_winner(self.game_column_and_row), -4)
+        self.game_service.play(self.game_column_and_row, self.game_column_and_row.board[0][1])
+        self.game_service.play(self.game_column_and_row, self.game_column_and_row.board[2][3])
+        self.assertEqual(self.game_service.check_winner(self.game_column_and_row), -4)

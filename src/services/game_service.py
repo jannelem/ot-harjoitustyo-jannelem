@@ -3,16 +3,18 @@ class GameService:
         self.player_service = player_service
 
     def play(self, game, tile):
-        if tile.value == 0 and tile.active is True:
+        if tile.value == 0 and tile.active:
             tile.value = game.turn
             game.turn = -game.turn
             tile.active = False
-        if self.check_winner(game) != 0 or self.active_tiles(game) is False:
+        if self.check_winner(game) != 0 or not self.active_tiles(game):
             self.game_over(game)
             if self.check_winner(game) > 0:
-                self.player_service.win(game.player_X, game.player_O, game.board_size)
+                self.player_service.win(
+                    game.player_x, game.player_o, game.board_size)
             elif self.check_winner(game) < 0:
-                self.player_service.win(game.player_O, game.player_X, game.board_size)
+                self.player_service.win(
+                    game.player_o, game.player_x, game.board_size)
 
     def check_winner(self, game):
         diagonal1_sum = 0
@@ -40,11 +42,10 @@ class GameService:
             for __ in range(game.board_size):
                 game.board[_][__].active = False
         game.in_progress = False
-    
+
     def active_tiles(self, game):
         for _ in range(game.board_size):
             for __ in range(game.board_size):
-                if game.board[_][__].active == True:
+                if game.board[_][__].active:
                     return True
         return False
-

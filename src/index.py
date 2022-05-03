@@ -1,8 +1,6 @@
-from entities.game import *
-from services.game_service import *
-from services.player_service import *
-from entities.player import *
-from services.player_service import *
+from entities.game import TicTacToe
+from services.game_service import GameService
+from services.player_service import PlayerService
 
 
 if __name__ == "__main__":
@@ -22,5 +20,5 @@ if __name__ == "__main__":
     print(new_game)
     game_service.play(new_game, new_game.board[0][2])
     print(game_service.active_tiles(new_game))
-    print(new_game.player_X)
-    print(new_game.player_O)
+    print(new_game.player_x)
+    print(new_game.player_o)

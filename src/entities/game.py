@@ -1,10 +1,11 @@
-from entities.player import *
+from entities.player import Player
+
 
 class TicTacToe():
 
     def __init__(self, board_size):
-        self.player_X = Player("Risti")
-        self.player_O = Player("Nolla")
+        self.player_x = Player("Risti")
+        self.player_o = Player("Nolla")
         self.turn = 1
         self.board_size = board_size
         self.in_progress = True
@@ -18,9 +19,9 @@ class TicTacToe():
     def __str__(self):
         return_string = "Vuorossa: "
         if self.turn == 1:
-            return_string += "X (" + self.player_X.name + ")"
+            return_string += "X (" + self.player_x.name + ")"
         elif self.turn == -1:
-            return_string += "O (" + self.player_O.name + ")"
+            return_string += "O (" + self.player_o.name + ")"
         else:
             return_string += "ei kukaan!"
         return_string += "\nPelilauta:\n"
@@ -44,4 +45,3 @@ class Tile:
         self.active = True
         self.row = row
         self.column = column
-
