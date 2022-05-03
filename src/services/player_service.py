@@ -1,12 +1,10 @@
+class PlayerService:
+
+    def win(self, player_X, player_O, board_size):
+        player_X.wins += board_size
+        player_O.losses += board_size
 
 
-def win(player, board_size):
-    player.wins += board_size
-
-
-def lose(player, board_size):
-    player.losses += board_size
-
-
-def tie(player, board_size):
-    player.ties += board_size
+    def tie(self, player_X, player_O, board_size):
+        player_X.ties += board_size
+        player_O.ties += board_size
