@@ -1,58 +1,49 @@
-import pygame
+from player import Player
 
+class TicTactoe():
 
-class TicTacToe:
     def __init__(self, board_size):
-        self.turn = 1  # "Cross has the first turn"
+        self.player_X = Player("Risti")
+        self.player_O = Player("Nolla")
+        self.turn = 1
         self.board_size = board_size
-        self.tile_size = 300//board_size
-        self.tiles = pygame.sprite.Group()
-        x_coordinate = 300
-        y_coordinate = 50
+        self.in_progress = True
         self.board = []
         for _ in range(self.board_size):
-            row = []
+            new_row = []
             for __ in range(self.board_size):
-                tile = Tile(self.tile_size, x_coordinate, y_coordinate)
-                row.append(tile)
-                self.tiles.add(tile)
-                x_coordinate += self.tile_size + 1
-            self.board.append(row)
-            x_coordinate = 300
-            y_coordinate += self.tile_size + 1
-
-    def deactivate_tiles(self):
-        for tile in self.tiles:
-            tile.deactivate()
-
+                new_row.append(Tile(_,__))
+            self.board.append(new_row)
+    
     def __str__(self):
-        string_to_return = "Turn: "
+        return_string = "Vuorossa: "
         if self.turn == 1:
-            string_to_return += "X\n"
+            return_string += "X (" + self.player_X.name + ")"
+        elif self.turn == -1:
+            return_string += "O (" + self.player_O.name + ")" 
         else:
-            string_to_return += "O\n"
-        string_to_return += "Board:\n"
-        for row in self.board:
-            for element in row:
-                if element.sign == 1:
-                    string_to_return += "X"
-                elif element.sign == -1:
-                    string_to_return += "O"
+            return_string += "ei kukaan!"
+        return_string += "\nPelilauta:\n"
+        for _ in range(self.board_size):
+            for __ in range(self.board_size):
+                if self.board[_][__].value == 1:
+                    return_string += "X"
+                elif self.board[_][__].value == -1:
+                    return_string += "O"
                 else:
-                    string_to_return += "_"
-            string_to_return += "\n"
-        return string_to_return
+                    return_string += "_"
+            return_string += "\n"
+        
+        return return_string
 
+class Tile:
 
-class Tile(pygame.sprite.Sprite):
-    def __init__(self, size, x_coordinate, y_coordinate):
-        super().__init__()
-        self.size = size
-        self.x_coordinate = x_coordinate
-        self.y_coordinate = y_coordinate
-        self.sign = 0
+    def __init__(self, row, column):
+        self.value = 0
         self.active = True
-        self.rect = pygame.Rect(x_coordinate, y_coordinate, size, size)
+        self.row = row
+        self.column = column
 
-    def deactivate(self):
-        self.active = False
+if __name__ == "__main__":
+    game = TicTactoe(5)
+    print(game)
