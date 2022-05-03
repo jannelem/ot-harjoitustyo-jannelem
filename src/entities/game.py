@@ -1,6 +1,4 @@
-from player import Player
-
-class TicTactoe():
+class TicTacToe:
 
     def __init__(self, board_size):
         self.player_X = Player("Risti")
@@ -46,4 +44,6 @@ class Tile:
 
 if __name__ == "__main__":
     game = TicTactoe(5)
+    game_service = GameService()
     print(game)
+    print(game_service.check_winner(game))
