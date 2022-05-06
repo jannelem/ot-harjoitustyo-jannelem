@@ -1,5 +1,13 @@
 # Changelog
 
+## Viikko 7 ja lopullinen palautus
+
+
+
+## Viikko 6
+
+- Sovelluslogiikka ja sen testit kirjoitettu alusta alkaen uudelleen
+
 ## Viikko 5
 
 - vaihdettu aiemmin komentorivillä ollut toiminnallisuus ruudukon koon valinnasta graafiseksi Tkinterillä toteutetuksi käyttöliittymäksi (jolla toteutetaan valikot ja mahdollisesti pelikin, koska aika on kulunut yrityksiin saada Tkinter ja pygame toimimaan yhteen)
