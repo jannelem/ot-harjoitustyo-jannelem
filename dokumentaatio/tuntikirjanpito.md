@@ -15,4 +15,9 @@
 | 23.4. | 1 | pelaajaluokan alustava koodaaminen |
 | 24.4. | 4 | Tkinteriin tutustuminen ja suunnittelu |
 | 25.4. | 3 | graafisen valikkokäyttöliittymän aloitus |
+| 2.5. | 5 | sovelluslogiikan koodaus lähes kokonaan uusiksi |
+| 3.5. | 2 | käyttöliittymän hahmottelua uusiksi |
+| 8.5. | 4 | käyttöliittymän päävalikon rakentaminen |
+| 10.5. | 3 | käyttöliittymän pelinäkymän aloitus  |
+| 14.5. | 6 | käyttöliittymän pelinäkymän koodausta loppuun, ongelmia |
 | yht. | 33 | |

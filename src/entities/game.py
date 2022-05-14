@@ -3,9 +3,9 @@ from entities.player import Player
 
 class TicTacToe():
 
-    def __init__(self, board_size):
-        self.player_x = Player("Risti")
-        self.player_o = Player("Nolla")
+    def __init__(self, board_size, player_x, player_o):
+        self.player_x = player_x
+        self.player_o = player_o
         self.turn = 1
         self.board_size = board_size
         self.in_progress = True

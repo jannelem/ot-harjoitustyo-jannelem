@@ -42,6 +42,7 @@ class GameService:
             for __ in range(game.board_size):
                 game.board[_][__].active = False
         game.in_progress = False
+        game.turn = 0
 
     def active_tiles(self, game):
         for _ in range(game.board_size):
