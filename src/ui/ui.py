@@ -80,6 +80,7 @@ class MainMenu:
         board_size_label = ttk.Label(master=self._frame, text="Ruudukon koko")
 
         board_size_variable = IntVar()
+        board_size_variable.set(3)
         board_size_dropdown = OptionMenu(self._frame, board_size_variable, *list(range(3,16)))
         
         play_button = ttk.Button(master=self._frame, text="Aloita peli", command=lambda: self._handle_start_game(board_size_variable.get(),self.players[player_x_variable.get()],self.players[player_o_variable.get()]))
@@ -123,7 +124,7 @@ class GameView:
             status_text = "Vuorossa: O (" + self._game.player_y.name + ")"
         
         status_label = ttk.Label(master=self._frame, text=status_text)
-        status_label.grid(row=0, column=0)
+        status_label.grid(row=0, column=0, columnspan = self._game.board_size)
 
         board_buttons=[]
         for _ in range(self._game.board_size):
@@ -134,14 +135,18 @@ class GameView:
                     button_text="X"
                 elif self._game.board[_][__].value == -1:
                     button_text="O"
-                row=_
-                column=__
-                button_row.append(ttk.Button(master=self._frame,text=button_text,command=lambda: print("nappi",row,column)))
+                    i=_
+                    j=__
+                button_row.append(ttk.Button(master=self._frame,text=button_text,command=self.click_tile(_,__)))
             board_buttons.append(button_row)
         for _ in range(len(board_buttons)):
             for __ in range(len(board_buttons)):
                 board_buttons[_][__].grid(row=_+1, column=__)
-        
+    
+    def click_tile(self,row, column):
+        return lambda: self._game_service.play(self._game, self._game.board[row][column])
+
+
                                 
 
     

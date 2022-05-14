@@ -6,6 +6,9 @@ from ui.ui import UI
 
 from tkinter import Tk
 
+
+
+
 window = Tk()
 window.title("Ristinolla")
 ui = UI(window)
